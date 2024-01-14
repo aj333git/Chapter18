@@ -7,4 +7,4 @@ Request Pipeline
 
 Web service using Minimal API    
 
-credit:-Adam Freeman's Pro ASP.NET Core
+Credit:-Adam Freeman's Pro ASP.NET Core
