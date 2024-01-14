@@ -1,0 +1,36 @@
+
+
+1 creating project
+
+dotnet new globaljson --sdk-version 7.0.403 --output Chapter18
+
+dotnet new web --no-https --output Chapter18 --framework net7.0
+
+dotnet new sln -o  Chapter18
+
+dotnet  sln Chapter18 add Chapter18
+
+2 adding nuget packages
+
+<ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+  </ItemGroup>
+  
+ dotnet tool uninstall --global dotnet-ef
+
+dotnet tool install --global dotnet-ef --version 7.0.9
+
+dotnet -ef
+dotnet ef migrations add Initial
+dotnet ef database update
+
+Target
+adding data model
+adding css
+configure request pipeline
+run
